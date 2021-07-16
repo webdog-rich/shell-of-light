@@ -1,5 +1,7 @@
 backend:
-  name: test-repo
+  name: github
+  repo: webdog-rich/shell-of-light
+  branch: main
 media_folder: static/assets
 public_folder: /assets
 collections:
