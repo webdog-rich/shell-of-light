@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: webdog-rich/shell-of-light
   branch: main
 media_folder: static/assets
