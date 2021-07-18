@@ -12,13 +12,6 @@ module.exports = {
     title: "Shell of Light",
   },
   plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/images/`,
-        name: "images",
-      },
-    },
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,

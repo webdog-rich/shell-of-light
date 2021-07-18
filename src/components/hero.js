@@ -1,14 +1,12 @@
 import { Link } from "gatsby"
 import React from "react"
 
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
-
 import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from "gatsby-background-image"
 
 const Hero = ({ heroImage }) => {
   const bgImage = convertToBgImage(heroImage)
-  console.log(bgImage)
+
   return (
     <BackgroundImage
       Tag="section"
@@ -20,7 +18,6 @@ const Hero = ({ heroImage }) => {
         <nav className="navbar">
           <div className="container">
             <div className="navbar-brand">
-              <a className="navbar-item"></a>
               <span className="navbar-burger" data-target="navbarMenuHeroB">
                 <span></span>
                 <span></span>
@@ -29,8 +26,12 @@ const Hero = ({ heroImage }) => {
             </div>
             <div id="navbarMenuHeroB" className="navbar-menu">
               <div className="navbar-end">
-                <Link className="navbar-item">About</Link>
-                <Link className="navbar-item">Contact</Link>
+                <Link className="navbar-item" to="/about">
+                  About
+                </Link>
+                <Link className="navbar-item" to="/contact">
+                  Contact
+                </Link>
               </div>
             </div>
           </div>
@@ -47,25 +48,7 @@ const Hero = ({ heroImage }) => {
           <div className="container">
             <ul>
               <li className="is-active">
-                <a>Overview</a>
-              </li>
-              <li>
-                <a>Modifiers</a>
-              </li>
-              <li>
-                <a>Grid</a>
-              </li>
-              <li>
-                <a>Elements</a>
-              </li>
-              <li>
-                <a>Components</a>
-              </li>
-              <li>
-                <a>Layout</a>
-              </li>
-              <li>
-                <a>More</a>
+                <Link to="#">Overview</Link>
               </li>
             </ul>
           </div>

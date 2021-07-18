@@ -4,7 +4,7 @@ import Collection from "./collection"
 const Collections = ({ collectionData }) => {
   const collections = collectionData.map(node => {
     return (
-      <div class="column is-multiline is-centered">
+      <div key={node.node.title} className="column is-multiline is-centered">
         <Collection
           key={node.node.heroImage.title}
           title={node.node.title}
@@ -13,7 +13,7 @@ const Collections = ({ collectionData }) => {
       </div>
     )
   })
-  return <div class="columns">{collections}</div>
+  return <div className="columns">{collections}</div>
 }
 
 export default Collections
