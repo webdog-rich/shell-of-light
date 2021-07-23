@@ -39,8 +39,10 @@ const Hero = ({ heroImage }) => {
       </div>
       <div className="hero-body">
         <div className="container has-text-centered">
-          <p className="title">Title</p>
-          <p className="subtitle">Subtitle</p>
+          <h1 className="title has-text-white is-size-1-desktop is-uppercase is-family-sans-serif">
+            Shell of Light
+          </h1>
+          <p className="subtitle has-text-white">Subtitle</p>
         </div>
       </div>
       <div className="hero-foot">

@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Collections from "../components/collections"
+import Footer from "../components/footer"
 import { graphql } from "gatsby"
 
 import "./mystyles.scss"
@@ -11,10 +12,11 @@ const IndexPage = ({ data }) => {
     <Layout pageTitle="Home Page">
       <Hero
         heroImage={
-          data.allContentfulCollections.edges[0].node.heroImage.gatsbyImageData
+          data.allContentfulCollections.nodes[0].heroImage.gatsbyImageData
         }
       />
-      <Collections collectionData={data.allContentfulCollections.edges} />
+      <Collections collectionData={data.allContentfulCollections.nodes} />
+      <Footer />
     </Layout>
   )
 }
@@ -22,15 +24,15 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query {
+  query query {
     allContentfulCollections {
-      edges {
-        node {
-          id
-          heroImage {
-            gatsbyImageData(placeholder: BLURRED)
-            title
-          }
+      nodes {
+        id
+        title
+        slug
+
+        heroImage {
+          gatsbyImageData(placeholder: BLURRED)
           title
         }
       }
