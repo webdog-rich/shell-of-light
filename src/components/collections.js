@@ -1,15 +1,19 @@
 import React from "react"
 import Collection from "./collection"
 
-const Collections = ({ collectionData }) => {
+const Collections = ({ collectionData, openLightBox, isGallery }) => {
+  const handleClick = i => {
+    openLightBox(i)
+  }
+
   const collections = collectionData.map((item, i) => {
-    if (item.heroImage) {
+    if (!isGallery) {
       return (
-        <div key={item.title + "div" + i} className="column is-3">
+        <div key={item.id + "div" + i} className="column is-3">
           <Collection
-            key={item.title + i}
+            key={item.id + i}
             title={item.title}
-            image={item.heroImage.gatsbyImageData}
+            image={item.image.gatsbyImageData}
             slug={item.slug}
           />
         </div>
@@ -17,19 +21,19 @@ const Collections = ({ collectionData }) => {
     } else {
       return (
         <div
-          key={item.title + "div" + i}
+          key={item.id + "div" + i}
           className="column is-3"
-          onClick={() => console.log("clicked")}
+          onClick={() => handleClick(i)}
           onKeyDown={e => {
             if (e.code === "Enter") {
-              console.log("clicked")
+              handleClick(i)
             }
           }}
           role="button"
           tabIndex="0"
         >
           <Collection
-            key={item.title + i}
+            key={item.id}
             title={item.title}
             image={item.image.gatsbyImageData}
           />
