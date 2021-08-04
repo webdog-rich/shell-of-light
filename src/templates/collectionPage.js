@@ -3,8 +3,22 @@ import Layout from "../components/layout"
 import Collections from "../components/collections"
 
 import { graphql } from "gatsby"
+import LightBox from "../components/lightBox"
+import Modal from "../components/modal"
 
 export default function CollectionPage({ data }) {
+  const [modalActive, setModalActive] = useState(false)
+  const [currentImage, setCurrentImage] = useState(null)
+
+  const handleLightBox = imageNum => {
+    setCurrentImage(imageNum)
+    setModalActive(true)
+  }
+
+  const handleClose = () => {
+    setModalActive(false)
+  }
+
   return (
     <Layout
       pageTitle={data.contentfulCollections.title}
@@ -15,6 +29,17 @@ export default function CollectionPage({ data }) {
         openLightBox={handleLightBox}
         isGallery={true}
       />
+
+      <Modal
+        isActive={modalActive}
+        handleClose={handleClose}
+        overFlowY="hidden"
+      >
+        <LightBox
+          images={data.contentfulCollections.images}
+          currentImage={currentImage}
+        />
+      </Modal>
     </Layout>
   )
 }

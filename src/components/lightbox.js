@@ -1,34 +1,34 @@
 import React, { useEffect } from "react"
 
+import { Helmet } from "react-helmet"
+
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const LightBox = ({
   images,
-  selectedImage,
+  currentImage,
   handleClose,
   handlePrevRequest,
   handleNextRequest,
 }) => {
-  const array = []
+  const imageArray = []
 
-  //   useEffect(() => {
-  //     console.log("mounted")
-  //     document.documentElement.style.overflow = "hidden"
-  //     return () => (document.documentElement.style.overflow = "unset")
-  //   }, [])
+  useEffect(() => {
+    //<link  rel="stylesheet" href="dist/css/modal-fx.min.css" />
+  }, [])
 
   images.forEach(image => {
-    console.log(image.image.gatsbyImageData)
-    console.log("updated")
-    array.push(
+    imageArray.push(
       <GatsbyImage
         image={image.image.gatsbyImageData}
         alt={image.image.title}
+        style={{ maxHeight: "90vh" }}
+        objectFit="contain"
       />
     )
   })
 
-  return <div>Modal Please</div>
+  return <p className="image">{imageArray[currentImage]}</p>
 }
 
 export default LightBox

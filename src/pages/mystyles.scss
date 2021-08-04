@@ -7,6 +7,8 @@ $family-sans-serif: "Nunito", sans-serif;
 
 $family-primary: $family-sans-serif;
 
+// $modal-content-width: 740px;
+
 h1.title {
   letter-spacing: 0.5em;
 }
@@ -15,6 +17,10 @@ h1.title {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.image img {
+  height: 100% !important;
 }
 
 @import "~bulma/bulma.sass";

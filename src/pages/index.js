@@ -6,7 +6,6 @@ import Collections from "../components/collections"
 import { graphql } from "gatsby"
 
 import "./mystyles.scss"
-import "lightbox-react/style.css"
 
 const IndexPage = ({ data }) => {
   return (
