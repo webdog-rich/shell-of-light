@@ -1,11 +1,17 @@
 import * as React from "react"
+import Ferns from "./ferns"
 import Footer from "./footer"
 import Hero from "./hero"
 
-const Layout = ({ children, heroImage, pageTitle }) => {
+const Layout = ({ children, heroImage, pageTitle, largeHero }) => {
   return (
     <>
-      <Hero heroImage={heroImage} pageTitle={pageTitle} />
+      <Ferns />
+      <Hero
+        heroImage={heroImage}
+        pageTitle={pageTitle}
+        isLarge={largeHero ? true : false}
+      />
 
       {children}
       <Footer />

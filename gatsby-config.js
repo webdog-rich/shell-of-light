@@ -16,6 +16,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-fontawesome-css`,
 
     {
       resolve: `gatsby-source-contentful`,

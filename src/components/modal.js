@@ -8,7 +8,11 @@ const Modal = ({ children, isActive, handleClose, overflowY }) => {
   }
 
   return (
-    <div className={isActive ? "modal is-active" : "modal"}>
+    <div
+      className={
+        isActive ? "modal is-active animate__animated animate__fadeIn" : "modal"
+      }
+    >
       <div className="modal-background" onClick={handleCloseClick}></div>
       <div className="modal-content">{children}</div>
       {/* <div className="modal-content is-huge" style={{ maxHeight: "100vh" }}>

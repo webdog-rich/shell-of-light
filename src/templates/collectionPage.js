@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Layout from "../components/layout"
 import Collections from "../components/collections"
+import BackButton from "../components/backButton"
 
 import { graphql } from "gatsby"
 import LightBox from "../components/lightBox"
@@ -20,27 +21,30 @@ export default function CollectionPage({ data }) {
   }
 
   return (
-    <Layout
-      pageTitle={data.contentfulCollections.title}
-      heroImage={data.contentfulCollections.image.gatsbyImageData}
-    >
-      <Collections
-        collectionData={data.contentfulCollections.images}
-        openLightBox={handleLightBox}
-        isGallery={true}
-      />
-
-      <Modal
-        isActive={modalActive}
-        handleClose={handleClose}
-        overFlowY="hidden"
+    <>
+      <BackButton />
+      <Layout
+        pageTitle={data.contentfulCollections.title}
+        heroImage={data.contentfulCollections.image.gatsbyImageData}
       >
-        <LightBox
-          images={data.contentfulCollections.images}
-          currentImage={currentImage}
+        <Collections
+          collectionData={data.contentfulCollections.images}
+          openLightBox={handleLightBox}
+          isGallery={true}
         />
-      </Modal>
-    </Layout>
+
+        <Modal
+          isActive={modalActive}
+          handleClose={handleClose}
+          overFlowY="hidden"
+        >
+          <LightBox
+            images={data.contentfulCollections.images}
+            currentImage={currentImage}
+          />
+        </Modal>
+      </Layout>
+    </>
   )
 }
 

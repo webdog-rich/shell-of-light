@@ -23,4 +23,28 @@ h1.title {
   height: 100% !important;
 }
 
+.tabs ul {
+  flex-wrap: wrap;
+}
+
+.back-button {
+  position: absolute;
+  color: white;
+  font-size: 45px;
+  z-index: 40;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.left-fern {
+  width: 30%;
+}
+
+.right-fern {
+  width: 30%;
+}
+
 @import "~bulma/bulma.sass";
+
+@import "~animate.css/animate.min.css";

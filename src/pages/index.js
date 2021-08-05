@@ -12,6 +12,7 @@ const IndexPage = ({ data }) => {
     <Layout
       pageTitle="Shell of Light"
       heroImage={data.allContentfulCollections.nodes[0].image.gatsbyImageData}
+      largeHero
     >
       <Collections collectionData={data.allContentfulCollections.nodes} />
     </Layout>

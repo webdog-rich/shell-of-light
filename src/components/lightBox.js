@@ -1,16 +1,8 @@
 import React, { useEffect } from "react"
 
-import { Helmet } from "react-helmet"
-
 import { GatsbyImage } from "gatsby-plugin-image"
 
-const LightBox = ({
-  images,
-  currentImage,
-  handleClose,
-  handlePrevRequest,
-  handleNextRequest,
-}) => {
+const LightBox = ({ images, currentImage }) => {
   const imageArray = []
 
   useEffect(() => {
@@ -28,7 +20,7 @@ const LightBox = ({
     )
   })
 
-  return <p className="image">{imageArray[currentImage]}</p>
+  return <figure className="image">{imageArray[currentImage]}</figure>
 }
 
 export default LightBox

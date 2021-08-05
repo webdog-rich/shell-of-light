@@ -4,14 +4,14 @@ import React from "react"
 import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from "gatsby-background-image"
 
-const Hero = ({ heroImage, pageTitle }) => {
+const Hero = ({ heroImage, pageTitle, isLarge }) => {
   const bgImage = convertToBgImage(heroImage)
 
   return (
     <>
       <BackgroundImage
         Tag="section"
-        className="hero is-large"
+        className={isLarge ? "hero is-large" : "hero is-halfheight"}
         {...bgImage}
         preserveStackingContext
       >
@@ -46,17 +46,7 @@ const Hero = ({ heroImage, pageTitle }) => {
             <p className="subtitle has-text-white">Subtitle</p>
           </div>
         </div>
-        <div className="hero-foot">
-          <nav className="tabs is-boxed is-fullwidth">
-            <div className="container">
-              <ul>
-                <li className="is-active">
-                  <Link to="#">Overview</Link>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+        <div className="hero-foot"></div>
       </BackgroundImage>
     </>
   )
