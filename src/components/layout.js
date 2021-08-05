@@ -3,14 +3,21 @@ import Ferns from "./ferns"
 import Footer from "./footer"
 import Hero from "./hero"
 
-const Layout = ({ children, heroImage, pageTitle, largeHero }) => {
+const Layout = ({
+  children,
+  heroImage,
+  pageTitle,
+  largeHero,
+  pageSubTitle,
+}) => {
   return (
     <>
-      <Ferns />
+      {/* <Ferns /> */}
       <Hero
         heroImage={heroImage}
         pageTitle={pageTitle}
         isLarge={largeHero ? true : false}
+        pageSubTitle={pageSubTitle}
       />
 
       {children}

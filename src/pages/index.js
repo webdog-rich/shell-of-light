@@ -10,11 +10,12 @@ import "./mystyles.scss"
 const IndexPage = ({ data }) => {
   return (
     <Layout
-      pageTitle="Shell of Light"
-      heroImage={data.allContentfulCollections.nodes[0].image.gatsbyImageData}
+      pageTitle={data.page.title}
+      heroImage={data.page.heroImage.gatsbyImageData}
+      pageSubTitle={data.page.subTitle}
       largeHero
     >
-      <Collections collectionData={data.allContentfulCollections.nodes} />
+      <Collections collectionData={data.collections.nodes} />
     </Layout>
   )
 }
@@ -22,8 +23,16 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query query {
-    allContentfulCollections {
+  query {
+    page: contentfulPage(slug: { eq: "shell-of-light" }) {
+      id
+      title
+      subTitle
+      heroImage {
+        gatsbyImageData(placeholder: BLURRED)
+      }
+    }
+    collections: allContentfulCollections {
       nodes {
         id
         title

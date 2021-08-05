@@ -9,7 +9,7 @@ const Collections = ({ collectionData, openLightBox, isGallery }) => {
   const collections = collectionData.map((item, i) => {
     if (!isGallery) {
       return (
-        <div key={item.id + "div" + i} className="column is-3">
+        <div key={item.id + "div" + i} className="column is-6">
           <Collection
             key={item.id + i}
             title={item.title}

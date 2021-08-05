@@ -6,18 +6,18 @@ export default function Ferns() {
   return (
     <div style={{ position: "absolute", width: "100%" }}>
       <StaticImage
-        src="../images/top-left-02-web.png"
+        src="../images/ferns-design-v2-left.png"
         alt="Beautiful Fern"
         style={{ left: "0px", top: "0px", position: "absolute" }}
-        className="left-fern fern animate__rotateInDownLeft animate__animated animate__delay-2s"
+        className="left-fern fern"
         objectFit="contain"
         placeholder="none"
       />
       <StaticImage
-        src="../images/top-right-01-web.png"
+        src="../images/ferns-design-v2-right.png"
         alt="Beautiful Fern"
         style={{ right: "-15px", top: "0px", position: "absolute" }}
-        className="right-fern fern animate__rotateInDownRight animate__animated animate__delay-1s"
+        className="right-fern fern"
         objectFit="contain"
         placeholder="none"
       />

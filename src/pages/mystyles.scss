@@ -3,14 +3,44 @@
 
 $offwhite: #fafafa;
 
-$family-sans-serif: "Nunito", sans-serif;
+$family-sans-serif: "Montserrat", sans-serif;
 
 $family-primary: $family-sans-serif;
 
-// $modal-content-width: 740px;
+$navbar-burger-color: #ffffff;
 
+// $modal-content-width: 740px;
 h1.title {
   letter-spacing: 0.5em;
+  font-weight: 400;
+}
+
+h2.title {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
+}
+
+.navbar-menu {
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    background-color: #030400 !important;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 0.2em;
+  }
+}
+
+a.navbar-item {
+  color: antiquewhite;
 }
 
 .center-content {
@@ -44,6 +74,8 @@ h1.title {
 .right-fern {
   width: 30%;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;900&display=swap");
 
 @import "~bulma/bulma.sass";
 
