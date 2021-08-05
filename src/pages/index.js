@@ -14,6 +14,7 @@ const IndexPage = ({ data }) => {
       heroImage={data.page.heroImage.gatsbyImageData}
       pageSubTitle={data.page.subTitle}
       largeHero
+      className="page-wrapper"
     >
       <Collections collectionData={data.collections.nodes} />
     </Layout>
