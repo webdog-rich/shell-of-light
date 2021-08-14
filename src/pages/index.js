@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
       largeHero
       className="page-wrapper"
     >
-      <Collections collectionData={data.collections.nodes} />
+      <Collections collectionData={data.collections.nodes[0].collectionList} />
     </Layout>
   )
 }
@@ -33,15 +33,16 @@ export const pageQuery = graphql`
         gatsbyImageData(placeholder: BLURRED)
       }
     }
-    collections: allContentfulCollections {
+    collections: allContentfulCollectionsList {
       nodes {
-        id
-        title
-        slug
-
-        image {
-          gatsbyImageData(placeholder: BLURRED)
+        collectionList {
+          id
           title
+          slug
+          image {
+            gatsbyImageData(placeholder: BLURRED)
+            title
+          }
         }
       }
     }

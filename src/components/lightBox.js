@@ -9,6 +9,10 @@ const LightBox = ({ images, currentImage }) => {
     //<link  rel="stylesheet" href="dist/css/modal-fx.min.css" />
   }, [])
 
+  if (!images) {
+    return null
+  }
+
   images.forEach(image => {
     imageArray.push(
       <GatsbyImage

@@ -6,6 +6,11 @@ const Collections = ({ collectionData, openLightBox, isGallery }) => {
     openLightBox(i)
   }
 
+  if (collectionData === null) {
+    console.log("its returning here")
+    return <div></div>
+  }
+
   const collections = collectionData.map((item, i) => {
     if (!isGallery) {
       return (
@@ -41,6 +46,11 @@ const Collections = ({ collectionData, openLightBox, isGallery }) => {
       )
     }
   })
+
+  if (collectionData === null) {
+    return null
+  }
+
   return (
     <div className="columns is-multiline is-centered is-gapless">
       {collections}

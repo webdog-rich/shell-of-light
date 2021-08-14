@@ -17,7 +17,7 @@ $navbar-item-active-color: #ffffff;
 $navbar-item-active-background-color: #03040000;
 
 h1.title {
-  letter-spacing: 0.5em;
+  letter-spacing: 0.2em;
   font-weight: 400;
 }
 
@@ -39,6 +39,15 @@ h2.title {
 
 .footer .content strong {
   color: white;
+}
+
+.main-text p {
+  margin-bottom: 25px;
+  line-height: 1.8em;
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (max-width: 1023px) {

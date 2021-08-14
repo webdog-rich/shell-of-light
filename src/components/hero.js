@@ -4,6 +4,9 @@ import React, { useState } from "react"
 import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from "gatsby-background-image"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faInstagram } from "@fortawesome/free-brands-svg-icons"
+
 const Hero = ({ heroImage, pageTitle, isLarge, pageSubTitle }) => {
   const bgImage = convertToBgImage(heroImage)
 
@@ -54,6 +57,14 @@ const Hero = ({ heroImage, pageTitle, isLarge, pageSubTitle }) => {
                   <Link className="navbar-item" to="/contact">
                     Contact
                   </Link>
+                  <a
+                    className="navbar-item"
+                    href="https://www.instagram.com/sshell.of.light"
+                  >
+                    <span className="icon is-large">
+                      <FontAwesomeIcon icon={faInstagram} size="lg" />
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
