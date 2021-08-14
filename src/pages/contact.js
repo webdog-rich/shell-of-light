@@ -17,6 +17,8 @@ const ContactPage = ({ data }) => {
 
   const [messageItem, setMessageItem] = useState(``)
 
+  const [isLoading, setIsLoading] = useState(false)
+
   function handleChange(e) {
     value[e.target.id] = e.target.value
     setMessage(``)
@@ -26,6 +28,7 @@ const ContactPage = ({ data }) => {
 
   function onFormSubmit(e) {
     e.preventDefault()
+    setIsLoading(true)
 
     window.grecaptcha.ready(function () {
       window.grecaptcha
@@ -49,6 +52,7 @@ const ContactPage = ({ data }) => {
             .then(json => {
               setMessage(json.message)
               setMessageItem(json.item)
+              setIsLoading(false)
             })
             .catch(err => console.log(err))
         })
@@ -149,7 +153,11 @@ const ContactPage = ({ data }) => {
                   <div className="field is-grouped">
                     <div className="control">
                       <button
-                        className="button is-link"
+                        className={
+                          isLoading
+                            ? "button is-link is-loading"
+                            : "button is-link"
+                        }
                         onClick={e => onFormSubmit(e)}
                         data-action="submit"
                       >
