@@ -1,10 +1,10 @@
 import fetch from "node-fetch"
 
+require("dotenv").config()
+
 const sgMail = require("@sendgrid/mail")
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-
-require("dotenv").config()
 
 export default function formHandler(req, res) {
   if (!req.body.name) {
