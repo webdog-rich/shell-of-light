@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fetch from "node-fetch"
 
 require("dotenv").config()
@@ -79,5 +78,3 @@ export default function formHandler(req, res) {
       }
     })
 }
-=======
->>>>>>> a502329137070a507ae10f99a91ad0945b8358a2
