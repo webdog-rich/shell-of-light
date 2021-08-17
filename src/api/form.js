@@ -72,9 +72,16 @@ export default function formHandler(req, res) {
       } else {
         return res.status(422).json({
           success: false,
-          message: "Captcha failed. Please try again",
+          message: "Sending failed. Please try again",
           item: "fail",
         })
       }
+    })
+    .catch(function (e) {
+      return res.status(422).json({
+        success: false,
+        message: "Sending failed. Please try again",
+        item: "fail",
+      })
     })
 }

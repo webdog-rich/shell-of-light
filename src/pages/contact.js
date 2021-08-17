@@ -50,11 +50,20 @@ const ContactPage = ({ data }) => {
           })
             .then(res => res.json())
             .then(json => {
+              if (json.item === "success") {
+                setValue({})
+              }
               setMessage(json.message)
               setMessageItem(json.item)
               setIsLoading(false)
             })
             .catch(err => console.log(err))
+        })
+        .catch(err => {
+          console.log(err)
+          setIsLoading(false)
+          setMessage("Captcha error. Please try again.")
+          setMessageItem("Fail")
         })
     })
   }
