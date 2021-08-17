@@ -7,6 +7,8 @@ import BackgroundImage from "gatsby-background-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram } from "@fortawesome/free-brands-svg-icons"
 
+import AnimatedLink from "./animatedLink"
+
 const Hero = ({ heroImage, pageTitle, isLarge, pageSubTitle }) => {
   const bgImage = convertToBgImage(heroImage)
 
@@ -51,12 +53,13 @@ const Hero = ({ heroImage, pageTitle, isLarge, pageSubTitle }) => {
                 }
               >
                 <div className="navbar-end">
-                  <Link className="navbar-item" to="/about">
+                  <AnimatedLink className="navbar-item" to="/about">
                     About
-                  </Link>
+                  </AnimatedLink>
                   <Link className="navbar-item" to="/contact">
                     Contact
                   </Link>
+
                   <a
                     className="navbar-item"
                     href="https://www.instagram.com/sshell.of.light"

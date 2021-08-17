@@ -18,7 +18,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-react-helmet`,
-
+    {
+      resolve: "gatsby-plugin-transition-link",
+      options: {
+        injectPageProps: false,
+      },
+    },
     {
       resolve: `gatsby-source-contentful`,
       options: {
