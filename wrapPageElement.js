@@ -2,12 +2,10 @@ import React from "react"
 
 import { StaticImage } from "gatsby-plugin-image"
 
-import { TransitionPortal } from "gatsby-plugin-transition-link"
-
 // Pass all props (hence the ...props) to the layout component so it has access to things like pageContext or location
 const wrapPageElement = ({ element, props }) => (
   <div className="top-wrapper">
-    <TransitionPortal>
+    <div className="animated-fern-wrapper">
       <div className="animate-fern">
         {/* <StaticImage
           src="../images/fern.jpg"
@@ -17,7 +15,7 @@ const wrapPageElement = ({ element, props }) => (
           className="animate-fern"
         /> */}
       </div>
-    </TransitionPortal>
+    </div>
     {element}
   </div>
 )
