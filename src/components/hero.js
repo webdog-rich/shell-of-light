@@ -56,9 +56,9 @@ const Hero = ({ heroImage, pageTitle, isLarge, pageSubTitle }) => {
                   <AnimatedLink className="navbar-item" to="/about">
                     About
                   </AnimatedLink>
-                  <Link className="navbar-item" to="/contact">
+                  <AnimatedLink className="navbar-item" to="/contact">
                     Contact
-                  </Link>
+                  </AnimatedLink>
 
                   <a
                     className="navbar-item"

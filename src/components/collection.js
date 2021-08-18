@@ -2,6 +2,8 @@ import React from "react"
 
 import { Link } from "gatsby"
 
+import AnimatedLink from "./animatedLink"
+
 import { convertToBgImage } from "gbimage-bridge"
 
 import BackgroundImage from "gatsby-background-image"
@@ -10,7 +12,7 @@ const Collection = ({ title, image, slug }) => {
   const bgImage = convertToBgImage(image)
   if (slug) {
     return (
-      <Link to={slug}>
+      <AnimatedLink to={slug}>
         <BackgroundImage
           Tag="section"
           className=""
@@ -24,7 +26,7 @@ const Collection = ({ title, image, slug }) => {
             </h2>
           </div>
         </BackgroundImage>
-      </Link>
+      </AnimatedLink>
     )
   } else {
     return (

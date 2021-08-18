@@ -6,15 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const wrapPageElement = ({ element, props }) => (
   <div className="top-wrapper">
     <div className="animated-fern-wrapper">
-      <div className="animate-fern">
-        {/* <StaticImage
-          src="../images/fern.jpg"
-          alt="A Fern"
-          placeholder="none"
-          style={{ opacity: 0, minHeight: "100vh" }}
-          className="animate-fern"
-        /> */}
-      </div>
+      <div className="animate-fern"></div>
     </div>
     {element}
   </div>

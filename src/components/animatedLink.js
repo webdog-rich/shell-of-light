@@ -11,25 +11,37 @@ export default function AnimatedLink({ to, className, children }) {
 
   const pause = 500
 
-  const entryTransition = () => {
+  const entryTransition = e => {
     //only run when page has fully loaded
+    const growTo = Math.max(window.innerWidth, window.innerHeight) * 2
+    console.log("entry")
     anime({
       targets: ".animate-fern",
-      width: [3000, 0],
-      height: [3000, 0],
+      width: [growTo, 0],
+      height: [growTo, 0],
 
       duration: entryDuration,
       delay: pause,
       easing: "easeOutQuart",
     })
-    console.log("entry")
   }
 
-  const exitTransition = () => {
+  const exitTransition = e => {
+    const growTo = Math.max(window.innerWidth, window.innerHeight) * 2
+    console.log(growTo)
+
+    const xTransform = e.clientX - e.view.window.innerWidth / 2
+
+    const yTransform = e.clientY - e.view.window.innerHeight / 2
+
+    anime.set(".animate-fern", {
+      translateX: xTransform,
+      translateY: yTransform,
+    })
     anime({
       targets: ".animate-fern",
-      width: [0, 3000],
-      height: [0, 3000],
+      width: [0, growTo],
+      height: [0, growTo],
 
       duration: exitDuration,
       easing: "easeInQuart",
@@ -43,11 +55,11 @@ export default function AnimatedLink({ to, className, children }) {
         className={className}
         to={to}
         exit={{
-          trigger: ({ exit, node }) => exitTransition(exit, node),
+          trigger: ({ exit, e, node }) => exitTransition(e),
           length: exitDuration / 1000,
         }}
         entry={{
-          trigger: ({ exit, node }) => entryTransition(exit, node),
+          trigger: ({ exit, e, node }) => entryTransition(e),
           delay: (exitDuration + 200) / 1000,
         }}
       >
