@@ -8,14 +8,14 @@ import { TransitionPortal } from "gatsby-plugin-transition-link"
 const wrapPageElement = ({ element, props }) => (
   <div className="top-wrapper">
     <TransitionPortal>
-      <div>
-        <StaticImage
+      <div className="animate-fern">
+        {/* <StaticImage
           src="../images/fern.jpg"
           alt="A Fern"
           placeholder="none"
           style={{ opacity: 0, minHeight: "100vh" }}
           className="animate-fern"
-        />
+        /> */}
       </div>
     </TransitionPortal>
     {element}

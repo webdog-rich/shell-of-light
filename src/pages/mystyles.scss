@@ -103,6 +103,22 @@ a.navbar-item {
 
 .gatsby-plugin-transition-link-portal {
   pointer-events: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animate-fern {
+  opacity: 1;
+  height: 0px;
+  width: 0px;
+  background-image: url(../images/fern.jpg);
+  background-position: 50% 50%;
+  background-size: 101vw;
+  background-repeat: no-repeat;
+  border-radius: 50%;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;900&display=swap");

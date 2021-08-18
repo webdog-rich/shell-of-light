@@ -15,7 +15,9 @@ export default function AnimatedLink({ to, className, children }) {
     //only run when page has fully loaded
     anime({
       targets: ".animate-fern",
-      opacity: [1, 0],
+      width: [2000, 0],
+      height: [2000, 0],
+      borderRadius: ["0%", "50%"],
       duration: entryDuration,
       delay: pause,
       easing: "easeOutQuad",
@@ -26,7 +28,9 @@ export default function AnimatedLink({ to, className, children }) {
   const exitTransition = () => {
     anime({
       targets: ".animate-fern",
-      opacity: [0, 1],
+      width: [0, 2000],
+      height: [0, 2000],
+      borderRadius: ["50%", "0%"],
       duration: exitDuration,
       easing: "easeInQuad",
     })
