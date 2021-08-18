@@ -12,7 +12,6 @@ const Layout = ({
 }) => {
   return (
     <>
-      {/* <Ferns /> */}
       <Hero
         heroImage={heroImage}
         pageTitle={pageTitle}

@@ -101,6 +101,10 @@ a.navbar-item {
   width: 30%;
 }
 
+.gatsby-plugin-transition-link-portal {
+  pointer-events: none;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;900&display=swap");
 
 @import "~bulma/bulma.sass";
