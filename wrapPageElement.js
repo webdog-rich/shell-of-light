@@ -13,7 +13,7 @@ const wrapPageElement = ({ element, props }) => (
           src="../images/fern.jpg"
           alt="A Fern"
           placeholder="none"
-          style={{ opacity: 0 }}
+          style={{ opacity: 0, minHeight: "100vh" }}
           className="animate-fern"
         />
       </div>

@@ -5,12 +5,20 @@ import TransitionLink from "gatsby-plugin-transition-link"
 import anime from "animejs"
 
 export default function AnimatedLink({ to, className, children }) {
+  const exitDuration = 500
+
+  const entryDuration = 500
+
+  const pause = 500
+
   const entryTransition = () => {
+    //only run when page has fully loaded
     anime({
       targets: ".animate-fern",
-      opacity: 0,
-      duration: 5000,
-      delay: 1000,
+      opacity: [1, 0],
+      duration: entryDuration,
+      delay: pause,
+      easing: "easeOutQuad",
     })
     console.log("entry")
   }
@@ -18,8 +26,9 @@ export default function AnimatedLink({ to, className, children }) {
   const exitTransition = () => {
     anime({
       targets: ".animate-fern",
-      opacity: 1,
-      duration: 2000,
+      opacity: [0, 1],
+      duration: exitDuration,
+      easing: "easeInQuad",
     })
     console.log("exit")
   }
@@ -31,11 +40,11 @@ export default function AnimatedLink({ to, className, children }) {
         to={to}
         exit={{
           trigger: ({ exit, node }) => exitTransition(exit, node),
-          length: 1,
+          length: exitDuration / 1000,
         }}
         entry={{
           trigger: ({ exit, node }) => entryTransition(exit, node),
-          delay: 1,
+          delay: (exitDuration + 200) / 1000,
         }}
       >
         {children}
