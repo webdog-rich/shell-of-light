@@ -15,12 +15,12 @@ export default function AnimatedLink({ to, className, children }) {
     //only run when page has fully loaded
     anime({
       targets: ".animate-fern",
-      width: [2000, 0],
-      height: [2000, 0],
-      borderRadius: ["0%", "50%"],
+      width: [3000, 0],
+      height: [3000, 0],
+
       duration: entryDuration,
       delay: pause,
-      easing: "easeOutQuad",
+      easing: "easeOutQuart",
     })
     console.log("entry")
   }
@@ -28,11 +28,11 @@ export default function AnimatedLink({ to, className, children }) {
   const exitTransition = () => {
     anime({
       targets: ".animate-fern",
-      width: [0, 2000],
-      height: [0, 2000],
-      borderRadius: ["50%", "0%"],
+      width: [0, 3000],
+      height: [0, 3000],
+
       duration: exitDuration,
-      easing: "easeInQuad",
+      easing: "easeInQuart",
     })
     console.log("exit")
   }
