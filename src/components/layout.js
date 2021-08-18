@@ -2,6 +2,8 @@ import * as React from "react"
 import Footer from "./footer"
 import Hero from "./hero"
 
+import { Helmet } from "react-helmet"
+
 const Layout = ({
   children,
   heroImage,
@@ -11,6 +13,14 @@ const Layout = ({
 }) => {
   return (
     <>
+      <Helmet>
+        <html lang="en" />
+        <meta charSet="utf-8" />
+        <title>{`Shell of Light - ${pageTitle}`}</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        <meta name="description" content="Photogrpahy by Laurelle Jones" />
+        <meta name="theme-color" content="#FFFFFF" />
+      </Helmet>
       <Hero
         heroImage={heroImage}
         pageTitle={pageTitle}
