@@ -112,7 +112,7 @@ a.navbar-item {
   align-items: center;
   position: fixed;
   height: 100vh;
-  z-index: 99999;
+  z-index: 9999999;
 }
 
 .animate-fern {
@@ -124,6 +124,7 @@ a.navbar-item {
   // background-size: 101vw 100vh;
   background-repeat: no-repeat;
   border-radius: 50%;
+  background-color: darkgreen;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;900&display=swap");
