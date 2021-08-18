@@ -5,7 +5,7 @@ import TransitionLink from "gatsby-plugin-transition-link"
 import anime from "animejs"
 
 export default function AnimatedLink({ to, className, children }) {
-  const exitDuration = 500
+  const exitDuration = 1000
 
   const entryDuration = 500
 
