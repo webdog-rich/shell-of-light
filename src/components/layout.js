@@ -1,5 +1,4 @@
 import * as React from "react"
-import Ferns from "./ferns"
 import Footer from "./footer"
 import Hero from "./hero"
 
