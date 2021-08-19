@@ -16,7 +16,9 @@ const Layout = ({
       <Helmet>
         <html lang="en" />
         <meta charSet="utf-8" />
-        <title>{`Shell of Light - ${pageTitle}`}</title>
+        <title>{`Shell of Light - ${
+          pageTitle === "Shell of Light" ? "Home" : pageTitle
+        }`}</title>
         <link rel="canonical" href="http://mysite.com/example" />
         <meta name="description" content="Photogrpahy by Laurelle Jones" />
         <meta name="theme-color" content="#FFFFFF" />

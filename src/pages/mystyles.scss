@@ -93,6 +93,10 @@ a.navbar-item {
   padding-left: 10px;
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;900&display=swap");
 
 @import "~bulma/bulma.sass";
