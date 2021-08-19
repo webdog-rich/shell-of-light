@@ -93,39 +93,6 @@ a.navbar-item {
   padding-left: 10px;
 }
 
-.left-fern {
-  width: 30%;
-}
-
-.right-fern {
-  width: 30%;
-}
-
-.animated-fern-wrapper {
-  pointer-events: none;
-  width: 300%;
-  height: 100%;
-  margin-left: -100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  height: 100vh;
-  z-index: 9999999;
-}
-
-.animate-fern {
-  opacity: 1;
-  height: 0px;
-  width: 0px;
-  background-image: url(../images/fern.jpg);
-  background-position: 50% 50%;
-  // background-size: 101vw 100vh;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  background-color: darkgreen;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;900&display=swap");
 
 @import "~bulma/bulma.sass";
