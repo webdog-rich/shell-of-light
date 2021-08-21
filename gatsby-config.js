@@ -8,7 +8,7 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://shelloflight.com/",
     title: "Shell of Light",
   },
   plugins: [
@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-source-contentful`,
       options: {

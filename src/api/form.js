@@ -41,7 +41,7 @@ export default function formHandler(req, res) {
     .then(json => {
       if (json.success === true) {
         const msg = {
-          to: "richard@webdog.co.nz",
+          to: "laurelle.claire@gmail.com",
           from: "richard@webdog.co.nz", // Use the email address or domain you verified above
           subject: "New message from website",
           text: `${req.body.email}, \n ${req.body.name}, \n ${req.body.message}`,

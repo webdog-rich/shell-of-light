@@ -19,7 +19,7 @@ const Layout = ({
         <title>{`Shell of Light - ${
           pageTitle === "Shell of Light" ? "Home" : pageTitle
         }`}</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <link rel="canonical" href="https://shelloflight.com/" />
         <meta name="description" content="Photogrpahy by Laurelle Jones" />
         <meta name="theme-color" content="#FFFFFF" />
       </Helmet>
