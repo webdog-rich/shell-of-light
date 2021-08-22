@@ -89,7 +89,7 @@ const ContactPage = ({ data }) => {
                     __html: data.page.mainText.childMarkdownRemark.html,
                   }}
                 />
-                <form className="contact-form">
+                <form className="contact-form main-text">
                   <div className="field">
                     <label className="label">Name</label>
                     <div className="control has-icons-left">
@@ -189,7 +189,7 @@ const ContactPage = ({ data }) => {
                     {message}
                   </p>
                 </form>
-                <div style={{ fontSize: "0.8em" }}>
+                <div className="main-text" style={{ fontSize: "0.8em" }}>
                   This site is protected by reCAPTCHA and the Google{" "}
                   <a href="https://policies.google.com/privacy">
                     Privacy Policy

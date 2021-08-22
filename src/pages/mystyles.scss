@@ -3,7 +3,9 @@
 
 $offwhite: #fafafa;
 
-$family-sans-serif: "Montserrat", sans-serif;
+$family-sans-serif: "Aclonica", sans-serif;
+
+$montserrat: "Montserrat", sans-serif;
 
 $family-primary: $family-sans-serif;
 
@@ -31,6 +33,7 @@ h2.title {
   text-transform: uppercase;
   font-size: 1.1em !important;
   letter-spacing: 0.1em;
+  font-family: $montserrat;
 }
 
 .columns.is-gapless:not(:last-child) {
@@ -39,6 +42,11 @@ h2.title {
 
 .footer .content strong {
   color: white;
+  font-family: $montserrat;
+}
+
+footer {
+  font-family: $montserrat;
 }
 
 .main-text p {
@@ -67,6 +75,16 @@ h2.title {
 
 a.navbar-item {
   color: antiquewhite;
+  font-size: 22px;
+}
+
+.main-text {
+  font-family: $montserrat;
+}
+
+.input,
+.textarea {
+  font-family: $montserrat;
 }
 
 .center-content {
@@ -102,6 +120,7 @@ a.navbar-item {
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 
 @import "~bulma/bulma.sass";
 
