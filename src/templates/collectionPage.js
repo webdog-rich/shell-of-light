@@ -57,13 +57,7 @@ export const query = graphql`
         gatsbyImageData
         title
       }
-      images {
-        image {
-          gatsbyImageData(placeholder: BLURRED)
-          title
-          id
-        }
-      }
+
       images2 {
         gatsbyImageData(placeholder: BLURRED)
         title
