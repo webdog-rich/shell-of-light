@@ -28,7 +28,7 @@ export default function CollectionPage({ data }) {
         heroImage={data.contentfulCollections.image.gatsbyImageData}
       >
         <Collections
-          collectionData={data.contentfulCollections.images}
+          collectionData={data.contentfulCollections.images2}
           openLightBox={handleLightBox}
           isGallery={true}
         />
@@ -39,7 +39,7 @@ export default function CollectionPage({ data }) {
           overFlowY="hidden"
         >
           <LightBox
-            images={data.contentfulCollections.images}
+            images={data.contentfulCollections.images2}
             currentImage={currentImage}
           />
         </Modal>
@@ -63,6 +63,11 @@ export const query = graphql`
           title
           id
         }
+      }
+      images2 {
+        gatsbyImageData(placeholder: BLURRED)
+        title
+        id
       }
     }
   }

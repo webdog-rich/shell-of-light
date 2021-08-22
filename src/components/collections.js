@@ -7,7 +7,6 @@ const Collections = ({ collectionData, openLightBox, isGallery }) => {
   }
 
   if (collectionData === null) {
-    console.log("its returning here")
     return <div></div>
   }
 
@@ -40,7 +39,7 @@ const Collections = ({ collectionData, openLightBox, isGallery }) => {
           <Collection
             key={item.id}
             title={item.title}
-            image={item.image.gatsbyImageData}
+            image={item.gatsbyImageData}
           />
         </div>
       )

@@ -30,15 +30,15 @@ const Collection = ({ title, image, slug }) => {
     return (
       <BackgroundImage
         Tag="section"
-        className=""
+        className="pointer"
         {...bgImage}
         alt={title}
         preserveStackingContext
       >
         <div className="image is-3by2">
-          <h2 className="has-ratio title is-align-items-center is-justify-content-center has-text-centered has-text-white is-flex">
+          {/* <h2 className="has-ratio title is-align-items-center is-justify-content-center has-text-centered has-text-white is-flex">
             {title}
-          </h2>
+          </h2> */}
         </div>
       </BackgroundImage>
     )

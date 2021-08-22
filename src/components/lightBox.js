@@ -16,8 +16,8 @@ const LightBox = ({ images, currentImage }) => {
   images.forEach(image => {
     imageArray.push(
       <GatsbyImage
-        image={image.image.gatsbyImageData}
-        alt={image.image.title}
+        image={image.gatsbyImageData}
+        alt={image.title}
         style={{ maxHeight: "90vh" }}
         objectFit="contain"
       />
