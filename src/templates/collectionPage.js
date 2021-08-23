@@ -59,7 +59,7 @@ export const query = graphql`
       }
 
       images2 {
-        gatsbyImageData(placeholder: BLURRED)
+        gatsbyImageData(placeholder: BLURRED, width: 800)
         title
         id
       }
