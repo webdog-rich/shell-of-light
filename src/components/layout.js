@@ -20,7 +20,7 @@ const Layout = ({
           pageTitle === "Shell of Light" ? "Home" : pageTitle
         }`}</title>
         <link rel="canonical" href="https://shelloflight.com/" />
-        <meta name="description" content="Photogrpahy by Laurelle Jones" />
+        <meta name="description" content="Photography by Laurelle Jones" />
         <meta name="theme-color" content="#FFFFFF" />
       </Helmet>
       <Hero
