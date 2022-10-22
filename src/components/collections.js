@@ -2,6 +2,16 @@ import React from "react"
 import Collection from "./collection"
 
 const Collections = ({ collectionData, openLightBox, isGallery }) => {
+  React.useEffect(() => {
+    const handleContextmenu = e => {
+      e.preventDefault()
+    }
+    document.addEventListener("contextmenu", handleContextmenu)
+    return function cleanup() {
+      document.removeEventListener("contextmenu", handleContextmenu)
+    }
+  }, [])
+
   const handleClick = i => {
     openLightBox(i)
   }

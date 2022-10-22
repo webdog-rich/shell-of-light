@@ -8,6 +8,15 @@ import { graphql } from "gatsby"
 import "./mystyles.scss"
 
 const IndexPage = ({ data }) => {
+  React.useEffect(() => {
+    const handleContextmenu = e => {
+      e.preventDefault()
+    }
+    document.addEventListener("contextmenu", handleContextmenu)
+    return function cleanup() {
+      document.removeEventListener("contextmenu", handleContextmenu)
+    }
+  }, [])
   return (
     <Layout
       pageTitle={data.page.title}

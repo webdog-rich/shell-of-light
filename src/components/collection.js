@@ -7,6 +7,16 @@ import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from "gatsby-background-image"
 
 const Collection = ({ title, image, slug }) => {
+  React.useEffect(() => {
+    const handleContextmenu = e => {
+      e.preventDefault()
+    }
+    document.addEventListener("contextmenu", handleContextmenu)
+    return function cleanup() {
+      document.removeEventListener("contextmenu", handleContextmenu)
+    }
+  }, [])
+
   const bgImage = convertToBgImage(image)
   if (slug) {
     return (
