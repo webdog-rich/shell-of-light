@@ -41,7 +41,7 @@ const ContactPage = ({ data }) => {
             ...value,
           }
           JSON.stringify(body)
-          fetch("/api/form", {
+          fetch("/.netlify/functions/form", {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
             headers: {
               "Content-Type": "application/json",

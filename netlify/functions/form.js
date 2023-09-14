@@ -6,7 +6,7 @@ const sgMail = require("@sendgrid/mail")
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-export default function formHandler(req, res) {
+exports.handler = async function (req, res) {
   if (!req.body.name) {
     return res.status(422).json({
       success: false,
