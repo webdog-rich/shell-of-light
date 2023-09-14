@@ -19,6 +19,7 @@ module.exports = {
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
